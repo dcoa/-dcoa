@@ -13,7 +13,7 @@ export const HomeIlustration = (props: Props) => {
       height="381.17967"
       viewBox="0 0 568.73047 381.17967"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      className="svg_bg"
+      className="svg_bg w-full h-auto"
     >
       <path
         d="M883.025,306.463H316.29456a1,1,0,0,1,0-2H883.025a1,1,0,0,1,0,2Z"
