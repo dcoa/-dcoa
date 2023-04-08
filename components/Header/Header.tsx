@@ -1,4 +1,5 @@
 import React from "react";
+import  Image  from 'next/image';
 import { motion } from "framer-motion";
 
 type Props = {};
@@ -15,15 +16,15 @@ export const Header = (props: Props) => {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <nav id="top-navbar" className="flex justify-between p-5">
+      <nav id="top-navbar" className="flex justify-between pr-10">
         <div>
-          <a>
-            {/* <img
-            src="https://avatars.githubusercontent.com/u/66016493?v=4"
+          <a className="flex gap-1 items-center cursor-pointer">
+            <Image
+            src="/logo-light.png"
             alt="profile"
-            width="40"
-            height="40"
-          /> */}
+            width={60}
+            height={60}
+          />
             <p>Catalina Olarte</p>
           </a>
         </div>

@@ -29,7 +29,7 @@ export const Hero = (props: Props) => {
       <div className="items-center flex flex-col justify-center text-center md:w-1/2 md:items-start md:text-start">
         <p className="leading-10">Hi, my name is</p>
         <p className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-l from-blue-400 to-green-500">
-          Diana Catalina Olarte.
+          Diana Catalina Olarte
         </p>
         <p className=" text-3xl text-gray-500">Frontend Developer</p>
 

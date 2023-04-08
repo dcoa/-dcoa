@@ -10,7 +10,7 @@ export const Projects = (props: Props) => {
       <h1 className="section_title">Projects</h1>
       <div className="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-scroll overflow-y-hidden bar">
         {projects.map((project) => (
-          <ProjectItem />
+          <ProjectItem  key={project}/>
         ))}
       </div>
     </div>

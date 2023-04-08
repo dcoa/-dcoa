@@ -7,6 +7,7 @@ import {
   DiJsBadge,
   DiReact,
   DiMysql,
+  DiJqueryLogo
 } from "react-icons/di";
 
 import { IoLogoFirebase, IoLogoFigma } from "react-icons/io5";
@@ -37,6 +38,7 @@ export const Skills = (props: Props) => {
         <DiGit className="w-1/5 h-1/5" />
         <DiGithubBadge className="w-1/5 h-1/5" />
         <IoLogoFigma className="w-1/5 h-1/5" />
+        <DiJqueryLogo className="w-1/5 h-1/5" />
         <Skill name="Figma">
           <IoLogoFigma className="w-full h-full fill-green-500 group-hover:fill-green-300" />
         </Skill>

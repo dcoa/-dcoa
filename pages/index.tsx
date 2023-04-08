@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import { Header } from "../components/Header";
-import styles from "../styles/Home.module.css";
+import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { About } from "../components/About";
 import { Skills } from "../components/Skills";
@@ -11,6 +11,8 @@ import { Contact } from "../components/Contact";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  // how to create a lang selector for next.js?
+  
   return (
     <>
       <Head>
@@ -43,6 +45,7 @@ export default function Home() {
           <Contact />
         </section>
         {/* Footer */}
+        <Footer/>
       </main>
     </>
   );
