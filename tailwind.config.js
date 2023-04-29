@@ -4,8 +4,8 @@ module.exports = {
     './pages/**/*.{js,ts,jxs,tsx}',
     './components/**/*.{js,ts,jxs,tsx}'
   ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+  darkMode: 'class',
+  plugins: [
+    require("flowbite/plugin")
+  ]
 }

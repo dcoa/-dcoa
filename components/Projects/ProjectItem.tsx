@@ -1,5 +1,5 @@
 import React from "react";
-import  Image  from 'next/image';
+import Image from 'next/image';
 
 
 type Props = {};
@@ -7,10 +7,12 @@ type Props = {};
 export const ProjectItem = (props: Props) => {
   return (
     <article className="snap-center shrink-0 md:max-w-7xl flex flex-col space-y-5 items-center justify-center px-6 md:px-20 lg:px-44 w-screen">
-      <img
+      <Image
         className="max-h-80"
         alt="Logo"
         src="https://raw.githubusercontent.com/tatianatorog/Burger-queen/test-bq/src/assets/Home.png"
+        width={350}
+        height={300}
       />
       <h1 className="text-xl font-bold">Project name</h1>
       <p>

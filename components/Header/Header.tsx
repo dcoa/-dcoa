@@ -1,13 +1,15 @@
 import React from "react";
-import  Image  from 'next/image';
+import Image from 'next/image';
 import { motion } from "framer-motion";
 
-type Props = {};
+type Props = {
+  themeVariant: string,
+};
 
 export const Header = (props: Props) => {
   return (
     <motion.header
-      className="sticky top-0 z-20 bg-white bg-opacity-50 backdrop-blur shadow"
+      className="sticky top-0 z-20 bg-white bg-opacity-50 backdrop-blur dark:bg-neutral-800 dark:bg-opacity-50 shadow"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -20,11 +22,11 @@ export const Header = (props: Props) => {
         <div>
           <a className="flex gap-1 items-center cursor-pointer">
             <Image
-            src="/logo-light.png"
-            alt="profile"
-            width={60}
-            height={60}
-          />
+              src={`/logo-${props.themeVariant}.png`}
+              alt="profile"
+              width={60}
+              height={60}
+            />
             <p>Catalina Olarte</p>
           </a>
         </div>
