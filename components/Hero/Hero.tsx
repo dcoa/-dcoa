@@ -13,9 +13,9 @@ export const Hero = (props: Props) => {
   const { greeting, intro } = getDataSection('hero');
   const [text] = useTypewriter({
     words: [intro[language]],
-    typeSpeed: 80,
+    typeSpeed: 90,
     deleteSpeed: 50,
-    delaySpeed: 1000,
+    delaySpeed: 80,
   });
 
   return (

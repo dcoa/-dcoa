@@ -10,10 +10,10 @@ type Props = {};
 export const About = (props: Props) => {
   const { language } = useLanguage()
   const { getDataSection } = useGeneralContext();
-  const { tittle } = getDataSection('about_me');
+  const { title, description, skills } = getDataSection('about_me');
   return (
     <div className="h-screen flex flex-col justify-evenly items-center max-w-7xl m-auto relative text-center md:flex-row md:text-left md:space-x-10">
-      <h1 className="section_title">{tittle[language]}</h1>
+      <h1 className="section_title">{title[language]}</h1>
       <motion.div
         initial={{
           opacity: 0,
@@ -33,18 +33,19 @@ export const About = (props: Props) => {
           <Tabs.Item
             title="Who I am?"
           >
-            Profile content
+            {description[language]}
+
           </Tabs.Item>
           <Tabs.Item
             active={true}
-            title="Dashboard"
+            title="Where I've worked?"
           >
             Dashboard content
           </Tabs.Item>
           <Tabs.Item
-            title="Settings"
+            title="My Skills"
           >
-            Settings content
+            {skills['Web Development'].map(({ name, icon }: { name: string, icon: string }) => (<label key={name}>{name} {icon}</label>))}
           </Tabs.Item>
         </Tabs.Group>
       </section>
