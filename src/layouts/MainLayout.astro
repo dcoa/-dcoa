@@ -1,0 +1,49 @@
+---
+import Header from '../components/Header.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="dark:bg-neutral-800 dark:text-slate-50">
+    <Header />
+    <main>
+      <slot name="before" />
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  html {
+    @apply overflow-scroll text-neutral-800 dark:text-slate-50  scroll-smooth snap-y snap-mandatory;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>
